@@ -1,13 +1,14 @@
 package com.provectus.kafka.ui.serdes.bson;
 
+import java.util.Collections;
+import java.util.Optional;
 
 import com.provectus.kafka.ui.serde.api.DeserializeResult;
 import com.provectus.kafka.ui.serde.api.PropertyResolver;
 import com.provectus.kafka.ui.serde.api.RecordHeaders;
 import com.provectus.kafka.ui.serde.api.SchemaDescription;
 import com.provectus.kafka.ui.serde.api.Serde;
-import java.util.Collections;
-import java.util.Optional;
+
 import org.bson.Document;
 
 public class BsonSerde implements Serde {

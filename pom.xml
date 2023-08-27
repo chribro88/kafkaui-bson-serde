@@ -6,7 +6,7 @@
     <groupId>com.provectus</groupId>
     <version>0.0.1-SNAPSHOT</version>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>kafka-ui-bson-serde</artifactId>
+    <artifactId>kafka-ui-smile-serde</artifactId>
     <packaging>jar</packaging>
 
     <properties>
@@ -20,13 +20,15 @@
             <groupId>com.provectus</groupId>
             <artifactId>kafka-ui-serde-api</artifactId>
             <version>1.1.0</version>
-            <scope>provided</scope>
+            <!-- <scope>provided</scope> -->
         </dependency>
+
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
             <artifactId>jackson-dataformat-smile</artifactId>
             <version>2.15.2</version>
         </dependency>
+        
         <!-- https://mvnrepository.com/artifact/org.mongodb/bson -->
         <dependency>
             <groupId>org.mongodb</groupId>
@@ -35,11 +37,11 @@
         </dependency>
 
         <!-- bson4jackson -->
-        <dependency>
+        <!-- <dependency>
             <groupId>de.undercouch</groupId>
             <artifactId>bson4jackson</artifactId>
             <version>2.13.1</version>
-        </dependency>
+        </dependency> -->
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
