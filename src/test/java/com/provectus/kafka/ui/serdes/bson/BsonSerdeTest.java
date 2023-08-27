@@ -1,4 +1,4 @@
-package com.provectus.kafka.ui.serdes.smile;
+package com.provectus.kafka.ui.serdes.bson;
 
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -13,24 +13,25 @@ import com.fasterxml.jackson.dataformat.smile.SmileParser;
 import com.provectus.kafka.ui.serde.api.DeserializeResult;
 import com.provectus.kafka.ui.serde.api.PropertyResolver;
 import com.provectus.kafka.ui.serde.api.Serde;
+
 import java.util.Map;
 import java.util.Optional;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
-
-class SmileSerdeTest {
+class BsonSerdeTest {
 
   private final PropertyResolver resolverMock = mock(PropertyResolver.class);
 
-  private SmileSerde smileSerde;
+  private BsonSerde smileSerde;
 
   @BeforeEach
   void initSerde() {
-    smileSerde = new SmileSerde();
+    smileSerde = new BsonSerde();
     smileSerde.configure(resolverMock, null, null);
   }
 
@@ -49,12 +50,11 @@ class SmileSerdeTest {
 
   @ParameterizedTest
   @ValueSource(strings = {
-      "{ \"name\": \"Clark Kent\",  \"age\": 35 }",
-      "123",
-      "123.123",
-      "\"string json\"",
-      "null"
+      "{ \"name\": \"Clark Kent\",  \"age\": 35 ,  \"dob\": {\"$date\": \"1988-10-13T17:06:23.409Z\"} }",
+      "{ \"BSON\": [ \"awesome\", 5.05, 1986 ] }",
+      "{ \"Blah\": 1 }"
   })
+
   void serializeAndDeserializeWorksInPair(String jsonString) {
     var serializer = smileSerde.serializer("test", Serde.Target.VALUE);
     byte[] serializedBytes = serializer.serialize(jsonString);
@@ -65,20 +65,6 @@ class SmileSerdeTest {
     assertEquals(DeserializeResult.Type.JSON, deserializeResult.getType());
     assertTrue(deserializeResult.getAdditionalProperties().isEmpty());
     assertJsonEquals(jsonString, deserializeResult.getResult());
-  }
-
-  @ParameterizedTest
-  @ValueSource(strings = {
-      "{ \"name\": \"Clark Kent\",  \"age\": 35 }",
-      "123",
-      "123.123",
-      "\"string json\"",
-      "null"
-  })
-  void byDefaultPayloadStartsWithSmilePrefix(String json) {
-    var serializer = smileSerde.serializer("test", Serde.Target.VALUE);
-    byte[] serializedBytes = serializer.serialize(json);
-    assertTrue(new String(serializedBytes).startsWith(":)"));
   }
 
 
@@ -94,7 +80,7 @@ class SmileSerdeTest {
 
     smileSerde.configure(resolverMock, null, null);
 
-    String json = "{ \"name\": \"Clark Kent\",  \"age\": 35 }";
+    String json = "{ \"name\": \"Clark Kent\",  \"age\": 35 ,  \"dob\": {\"$date\": \"1988-10-13T17:06:23.409Z\"} }";
 
     var serializer = smileSerde.serializer("test", Serde.Target.VALUE);
     byte[] serializedBytes = serializer.serialize(json);
