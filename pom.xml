@@ -6,7 +6,7 @@
     <groupId>com.provectus</groupId>
     <version>0.0.1-SNAPSHOT</version>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>kafka-ui-smile-serde</artifactId>
+    <artifactId>kafka-ui-bson-serde</artifactId>
     <packaging>jar</packaging>
 
     <properties>
