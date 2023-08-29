@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.provectus.kafka.ui.serdes.bson.BsonSerdeTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.436 s - in com.provectus.kafka.ui.serdes.bson.BsonSerdeTest

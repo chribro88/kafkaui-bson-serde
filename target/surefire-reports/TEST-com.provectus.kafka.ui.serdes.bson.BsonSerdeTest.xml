@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.provectus.kafka.ui.serdes.bson.BsonSerdeTest" time="0.436" tests="8" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="18"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/workspace/kafkaui-bson-serde/target/test-classes:/workspace/kafkaui-bson-serde/target/classes:/home/vsc/.m2/repository/com/provectus/kafka-ui-serde-api/1.1.0/kafka-ui-serde-api-1.1.0.jar:/home/vsc/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.15.2/jackson-dataformat-smile-2.15.2.jar:/home/vsc/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/home/vsc/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/home/vsc/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:/home/vsc/.m2/repository/org/mongodb/bson/4.10.2/bson-4.10.2.jar:/home/vsc/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/home/vsc/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:/home/vsc/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/vsc/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/home/vsc/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/home/vsc/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/vsc/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.8.2/junit-jupiter-params-5.8.2.jar:/home/vsc/.m2/repository/org/mockito/mockito-core/4.8.0/mockito-core-4.8.0.jar:/home/vsc/.m2/repository/net/bytebuddy/byte-buddy/1.12.14/byte-buddy-1.12.14.jar:/home/vsc/.m2/repository/net/bytebuddy/byte-buddy-agent/1.12.14/byte-buddy-agent-1.12.14.jar:/home/vsc/.m2/repository/org/objenesis/objenesis/3.2/objenesis-3.2.jar:"/>
+    <property name="java.vm.vendor" value="Amazon.com Inc."/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
+    <property name="user.timezone" value="GMT"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="18"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/home/vsc/.sdkman/candidates/java/18.0.2-amzn/lib"/>
+    <property name="sun.java.command" value="/workspace/kafkaui-bson-serde/target/surefire/surefirebooter-20230829032316765_3.jar /workspace/kafkaui-bson-serde/target/surefire 2023-08-29T03-23-16_713-jvmRun1 surefire-20230829032316765_1tmp surefire_0-20230829032316765_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/workspace/kafkaui-bson-serde/target/test-classes:/workspace/kafkaui-bson-serde/target/classes:/home/vsc/.m2/repository/com/provectus/kafka-ui-serde-api/1.1.0/kafka-ui-serde-api-1.1.0.jar:/home/vsc/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.15.2/jackson-dataformat-smile-2.15.2.jar:/home/vsc/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/home/vsc/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/home/vsc/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:/home/vsc/.m2/repository/org/mongodb/bson/4.10.2/bson-4.10.2.jar:/home/vsc/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/home/vsc/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:/home/vsc/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/vsc/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/home/vsc/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/home/vsc/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/vsc/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.8.2/junit-jupiter-params-5.8.2.jar:/home/vsc/.m2/repository/org/mockito/mockito-core/4.8.0/mockito-core-4.8.0.jar:/home/vsc/.m2/repository/net/bytebuddy/byte-buddy/1.12.14/byte-buddy-1.12.14.jar:/home/vsc/.m2/repository/net/bytebuddy/byte-buddy-agent/1.12.14/byte-buddy-agent-1.12.14.jar:/home/vsc/.m2/repository/org/objenesis/objenesis/3.2/objenesis-3.2.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/vsc"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2022-07-19"/>
+    <property name="java.home" value="/home/vsc/.sdkman/candidates/java/18.0.2-amzn"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/workspace/kafkaui-bson-serde"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/workspace/kafkaui-bson-serde/target/surefire/surefirebooter-20230829032316765_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="18.0.2+9-FR"/>
+    <property name="user.name" value="vsc"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.2.0-26-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Corretto-18.0.2.9.1"/>
+    <property name="localRepository" value="/home/vsc/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-18/issues/"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="18.0.2"/>
+    <property name="user.dir" value="/workspace/kafkaui-bson-serde"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Amazon.com Inc."/>
+    <property name="java.vm.version" value="18.0.2+9-FR"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="62.0"/>
+  </properties>
+  <testcase name="canBeAppliedToAnyTopic(Target)[1]" classname="com.provectus.kafka.ui.serdes.bson.BsonSerdeTest" time="0.023"/>
+  <testcase name="canBeAppliedToAnyTopic(Target)[2]" classname="com.provectus.kafka.ui.serdes.bson.BsonSerdeTest" time="0.001"/>
+  <testcase name="doesNoProvideSchemaDescription(Target)[1]" classname="com.provectus.kafka.ui.serdes.bson.BsonSerdeTest" time="0.001"/>
+  <testcase name="doesNoProvideSchemaDescription(Target)[2]" classname="com.provectus.kafka.ui.serdes.bson.BsonSerdeTest" time="0.001"/>
+  <testcase name="serializeAndDeserializeWorksInPair(String)[1]" classname="com.provectus.kafka.ui.serdes.bson.BsonSerdeTest" time="0.11"/>
+  <testcase name="serializeAndDeserializeWorksInPair(String)[2]" classname="com.provectus.kafka.ui.serdes.bson.BsonSerdeTest" time="0.002"/>
+  <testcase name="serializeAndDeserializeWorksInPair(String)[3]" classname="com.provectus.kafka.ui.serdes.bson.BsonSerdeTest" time="0.001"/>
+  <testcase name="generatorAndParserFeaturesCanBeTunedViaConfig" classname="com.provectus.kafka.ui.serdes.bson.BsonSerdeTest" time="0.014"/>
+</testsuite>

@@ -1,0 +1,4 @@
+com/provectus/kafka/ui/serdes/bson/BsonSerde$1.class
+com/provectus/kafka/ui/serdes/bson/BsonSerde$2.class
+com/provectus/kafka/ui/serdes/bson/BsonToBinary.class
+com/provectus/kafka/ui/serdes/bson/BsonSerde.class
