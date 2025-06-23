@@ -1,4 +1,4 @@
-package com.provectus.kafka.ui.serdes.bson;
+package com.chribro.kafka.ui.serdes.bson;
 
 import org.bson.BsonBinaryReader;
 import org.bson.BsonBinaryWriter;
