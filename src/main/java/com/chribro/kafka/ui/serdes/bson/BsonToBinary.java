@@ -1,4 +1,6 @@
-package com.chribro.kafbat.serdes.bson;
+package com.chribro.kafka.ui.serdes.bson;
+
+import java.nio.ByteBuffer;
 
 import org.bson.BsonBinaryReader;
 import org.bson.BsonBinaryWriter;
@@ -8,8 +10,6 @@ import org.bson.codecs.DecoderContext;
 import org.bson.codecs.DocumentCodec;
 import org.bson.codecs.EncoderContext;
 import org.bson.io.BasicOutputBuffer;
-
-import java.nio.ByteBuffer;
 
 public class BsonToBinary {
 

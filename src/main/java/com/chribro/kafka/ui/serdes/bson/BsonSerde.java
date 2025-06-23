@@ -1,15 +1,15 @@
-package com.chribro.kafbat.serdes.bson;
+package com.chribro.kafka.ui.serdes.bson;
 
 import java.util.Collections;
 import java.util.Optional;
+
+import org.bson.Document;
 
 import io.kafbat.ui.serde.api.DeserializeResult;
 import io.kafbat.ui.serde.api.PropertyResolver;
 import io.kafbat.ui.serde.api.RecordHeaders;
 import io.kafbat.ui.serde.api.SchemaDescription;
 import io.kafbat.ui.serde.api.Serde;
-
-import org.bson.Document;
 
 public class BsonSerde implements Serde {
 
