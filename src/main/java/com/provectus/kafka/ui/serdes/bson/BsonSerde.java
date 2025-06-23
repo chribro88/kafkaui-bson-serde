@@ -1,4 +1,4 @@
-package com.chribro.kafka.ui.serdes.bson;
+package com.chribro.kafbat.serdes.bson;
 
 import java.util.Collections;
 import java.util.Optional;
