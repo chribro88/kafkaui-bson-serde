@@ -1,13 +1,13 @@
-package com.provectus.kafka.ui.serdes.bson;
+package com.chribro.kafka.ui.serdes.bson;
 
 import java.util.Collections;
 import java.util.Optional;
 
-import com.provectus.kafka.ui.serde.api.DeserializeResult;
-import com.provectus.kafka.ui.serde.api.PropertyResolver;
-import com.provectus.kafka.ui.serde.api.RecordHeaders;
-import com.provectus.kafka.ui.serde.api.SchemaDescription;
-import com.provectus.kafka.ui.serde.api.Serde;
+import io.kafbat.ui.serde.api.DeserializeResult;
+import io.kafbat.ui.serde.api.PropertyResolver;
+import io.kafbat.ui.serde.api.RecordHeaders;
+import io.kafbat.ui.serde.api.SchemaDescription;
+import io.kafbat.ui.serde.api.Serde;
 
 import org.bson.Document;
 
