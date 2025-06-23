@@ -1,2 +1,2 @@
-/workspace/kafkaui-bson-serde/src/main/java/com/provectus/kafka/ui/serdes/bson/BsonSerde.java
-/workspace/kafkaui-bson-serde/src/main/java/com/provectus/kafka/ui/serdes/bson/BsonToBinary.java
+/workspace/kafkaui-bson-serde/src/main/java/com/chribro/kafbat/serdes/bson/BsonSerde.java
+/workspace/kafkaui-bson-serde/src/main/java/com/chribro/kafbat/serdes/bson/BsonToBinary.java
