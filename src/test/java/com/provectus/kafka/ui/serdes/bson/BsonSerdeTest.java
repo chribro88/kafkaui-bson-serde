@@ -1,4 +1,4 @@
-package com.provectus.kafka.ui.serdes.bson;
+package com.chribro.kafka.ui.serdes.bson;
 
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
