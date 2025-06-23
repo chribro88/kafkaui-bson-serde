@@ -3,10 +3,10 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <groupId>com.provectus</groupId>
-    <version>0.0.1-SNAPSHOT</version>
+    <groupId>com.chribro</groupId>
+    <version>0.0.12</version>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>kafka-ui-bson-serde</artifactId>
+    <artifactId>kafbat-bson-serde</artifactId>
     <packaging>jar</packaging>
 
     <properties>
@@ -17,9 +17,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.provectus</groupId>
-            <artifactId>kafka-ui-serde-api</artifactId>
-            <version>1.1.0</version>
+             <groupId>io.kafbat.ui</groupId>
+             <artifactId>serde-api</artifactId>
+             <version>1.0.0</version>
             <scope>provided</scope>
         </dependency>
 
